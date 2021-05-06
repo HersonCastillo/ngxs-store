@@ -1,0 +1,18 @@
+@import 'src/styles/functions/rem';
+@import 'src/styles/mixins/screen-resolutions';
+
+section.section-layout {
+  position: relative;
+  top: rem(20);
+  padding: rem(10);
+  width: 60%;
+  margin: 0 auto;
+
+  @include max-screen(breakpoint('md', 'max')) {
+    width: 80%;
+  }
+
+  @include max-screen(breakpoint('sm', 'max')) {
+    width: 90%;
+  }
+}

@@ -1,0 +1,18 @@
+<div *ngIf="modalProperties | async as props">
+  <div class="td-modal__wrapper" *ngIf="isVisible">
+    <div class="td-modal__container">
+      <div class="td-modal__layout">
+        <div class="td-modal__layout-title">
+          <span>{{ props.title }}</span>
+        </div>
+        <p class="td-modal__layout-content">
+          {{ props.content }}
+        </p>
+      </div>
+      <div class="td-modal__footer" *ngIf="!!props.hasFooter">
+        <td-button (click)="closeModal(props.onCancel)">Cancel</td-button>
+        <td-button (click)="closeModal(props.onOk)">OK</td-button>
+      </div>
+    </div>
+  </div>
+</div>

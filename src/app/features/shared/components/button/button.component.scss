@@ -1,0 +1,17 @@
+@import 'src/styles/mixins/reset-button';
+@import 'src/styles/functions/breakpoint';
+@import 'src/styles/functions/palette';
+
+button {
+  @include reset-button;
+  font-family: 'Open sans', sans-serif, arial;
+  font-weight: bold;
+  color: palette(gray);
+  box-shadow: 0px 0px 4px 0px palette(gray, 2);
+  border: 1px solid palette(gray, 2);
+}
+
+button:active {
+  box-shadow: inset 0px 0px 3px 0px palette(gray, 1);
+  color: palette(gray, 9);
+}

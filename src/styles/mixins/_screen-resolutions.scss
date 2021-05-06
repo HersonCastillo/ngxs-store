@@ -1,0 +1,13 @@
+@import '../functions/breakpoint';
+
+@mixin max-screen ($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin min-screen ($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}

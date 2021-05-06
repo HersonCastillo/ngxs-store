@@ -30,5 +30,6 @@ module.exports = {
     'lines-between-class-members': 0,
     'implicit-arrow-linebreak': 0,
     'no-param-reassign': 0,
+    'import/no-extraneous-dependencies': 0,
   },
 };

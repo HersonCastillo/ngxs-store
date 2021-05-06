@@ -1,0 +1,11 @@
+<td-common-layout>
+  <div class="add-feature-card-form">
+    <td-add-feature-card></td-add-feature-card>
+  </div>
+  <div class="features-list">
+    <td-feature-card
+      *ngFor="let board of boards$ | async"
+      [board]="board"
+    ></td-feature-card>
+  </div>
+</td-common-layout>

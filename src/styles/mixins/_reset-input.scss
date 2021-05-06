@@ -1,0 +1,18 @@
+@import '../functions/rem';
+@import '../functions/palette';
+
+@mixin reset-input {
+  border-style: none;
+  outline-style: none;
+  margin: rem(3);
+  padding: rem(4);
+}
+
+@mixin input-style {
+  @include reset-input();
+
+  border: 1px solid palette(gray, 4);
+  box-shadow: 0px 0px 3px 0px palette(gray, 2);
+  border-radius: 3px;
+  width: 100%;
+}

@@ -1,0 +1,43 @@
+@import 'src/styles/functions/rem';
+@import 'src/styles/functions/palette';
+
+.td-feature-card__wrapper {
+  width: rem(200);
+  margin-right: rem(10);
+  margin-bottom: rem(5);
+  background-color: palette(white, 8);
+  border: 1px solid palette(gray, 3);
+  padding: rem(10);
+  border-radius: 10px;
+
+  &-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem(10);
+
+    .title {
+      margin-bottom: rem(5);
+
+      span {
+        font-weight: bold;
+        font-size: 1.3em;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.td-feature-card__content {
+  width: 100%;
+
+  &::before {
+    content: 'Tasks';
+    font-size: .7em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    display: block;
+    letter-spacing: 1px;
+    margin-bottom: rem(3);
+  }
+}

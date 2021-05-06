@@ -1,0 +1,8 @@
+@import '../breakpoints';
+@import '../variables';
+
+@function breakpoint($state, $measure: 'min') {
+  $current-state: map-get($breakpoints, $state);
+  $value: map-get($current-state, $measure) + 0rem;
+  @return $value * $rem-constant;
+}

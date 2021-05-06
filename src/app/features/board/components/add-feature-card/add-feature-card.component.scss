@@ -1,0 +1,9 @@
+@import 'src/styles/mixins/reset-input';
+
+.td-add-card-form__layout-form {
+  display: flex;
+
+  input {
+    @include input-style;
+  }
+}

@@ -1,0 +1,10 @@
+@import '../functions/rem';
+
+@mixin reset-button {
+  outline-style: none;
+  border-style: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: rem(3);
+  padding: rem(4);
+}
