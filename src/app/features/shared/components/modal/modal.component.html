@@ -6,7 +6,7 @@
           <span>{{ props.title }}</span>
         </div>
         <p class="td-modal__layout-content">
-          {{ props.content }}
+          <ng-template [ngTemplateOutlet]="props.content"></ng-template>
         </p>
       </div>
       <div class="td-modal__footer" *ngIf="!!props.hasFooter">

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, TemplateRef, ViewChild } from '@angular/core';
 import { ModalService } from 'src/app/features/shared/services/modal.service';
 import { FeatureCard } from '../../interfaces/card';
 
@@ -10,12 +10,15 @@ import { FeatureCard } from '../../interfaces/card';
 export class FeatureCardComponent {
   @Input() board: FeatureCard;
 
+  @ViewChild('modalContent')
+  modalContent: TemplateRef<any>;
+
   constructor(public modalService: ModalService) { }
 
   addTicket(): void {
     this.modalService.openModal({
       title: 'Hola',
-      content: 'Como esta',
+      content: this.modalContent,
       hasFooter: true,
       onOk: () => console.log('ok'),
       onCancel: () => console.log('cancel'),

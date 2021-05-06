@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
+import { ElementRef, Injectable, TemplateRef } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 interface Modal {
   title: string;
-  content: string;
+  content: TemplateRef<any>;
   hasFooter?: boolean;
   onOk?: () => void;
   onCancel?: () => void;

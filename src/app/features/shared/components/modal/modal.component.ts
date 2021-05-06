@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, TemplateRef, ViewChild } from '@angular/core';
 import { ModalService } from '../../services/modal.service';
 
 @Component({
@@ -9,6 +9,9 @@ import { ModalService } from '../../services/modal.service';
 export class ModalComponent {
   @Input() isVisible = false;
   modalProperties = this.modalService.modalProperties$;
+
+  @ViewChild('content')
+  content: TemplateRef<any>;
 
   constructor(public modalService: ModalService) { }
 
